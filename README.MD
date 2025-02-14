@@ -7,7 +7,7 @@ Dispositivo objetivo: Mínimo funcionamiento en dispositivos móviles.
 ## Integrantes
 
 Líder de Proyecto - Kevin Esneider Ocampo Osorio
-Desarrollador Frontend - Jasmin Esperanza Garcia Paez
+Desarrollador Frontend - Jasmin Esperanza Garcia Paez, Kevin Esneider Ocampo Osorio
 Desarrollador JavaScript - Jhonatan David Arcos Dominguez
 Tester - Kevin Esneider Ocampo Osorio
 
