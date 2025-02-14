@@ -14,18 +14,16 @@ body {
 
 header {
     width: 100%;
-    height: 70px;
+    height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 25px;
     font-family: 'Righteous', display;
     color: #a2d2ff;
-    margin-bottom: 20px;
-
 }
 
-header > h1 {
+header h1 {
     position: relative;
     animation: fly 2s ease-in-out infinite alternate;
     -webkit-text-stroke: 1px #2b7ecc;
@@ -35,6 +33,7 @@ header > h1 {
     0% {
         transform: translateY(0px);
     }
+
     100% {
         transform: translateY(10px);
     }
@@ -48,18 +47,30 @@ main {
     justify-content: center;
 }
 
-form > h2 {
+h2 {
     font-family: 'Questrial', sans-serif;
     text-align: center;
-    margin: 40px;
-}
-form > input[type="radio"] {
-    display: none;
 }
 
-form > label {
+form {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.selectPlayers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 200px;
+}
+
+label {
     padding: 25px 40px;
-    margin: 5px;
     font-family: 'Righteous', display;
     border-radius: 10px;
     font-size: 50px;
@@ -68,45 +79,50 @@ form > label {
     -webkit-tap-highlight-color: transparent;
 }
 
-form > .p2 {
+.p2 {
     background-color: #fce1e4;
     border: solid 1px #e9808c;
     color: #e9808c;
 }
 
-form > .p3 {
+.p3 {
     background-color: #fcf4dd;
     border: solid 1px #c0a143;
     color: #c0a143;
 }
 
-form > .p4 {
+.p4 {
     background-color: #e7f1e9;
     border: solid 1px #6ac775;
     color: #6ac775;
 }
 
-form > input[type="radio"]:checked + label {
-    padding: 35px 50px;
-    animation: bounce 0.2s ease-in-out;
-}
-  
-@keyframes bounce {
-    0% { 
-      transform: scale(1); 
-    }
-    50% {
-      transform: scale(1.2); 
-    }
-    100% { 
-      transform: scale(1); 
+input[type="radio"] {
+    display: none;
+
+    &:checked+label {
+        padding: 35px 50px;
+        animation: bounce 0.2s ease-in-out;
     }
 }
 
-form > button {
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
     display: flex;
     justify-items: center;
-    margin: 60px 0px 60px 90px;
     background-color: #a2d2ff;
     color: #2b7ecc;
     padding: 15px 60px;
@@ -120,7 +136,7 @@ form > button {
     -webkit-tap-highlight-color: transparent;
 }
 
-form > button:hover {
+button:hover {
     background-color: #2b7ecc;
     color: #ffffff;
     transform: scale(1.2);
