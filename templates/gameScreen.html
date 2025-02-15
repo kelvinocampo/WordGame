@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play!</title>
     <link rel="stylesheet" href="../styles/playScreen.css">
+    <link rel="stylesheet" href="../styles/reset.css">
 </head>
 <body>
     <header>
@@ -23,10 +24,10 @@
                 </div>
                 <h3 id="player">Player 1</h3>
             </div>
-            <form action="">
+            <form>
                 <label for="introducedWords">Enter words starting with the letter above:</label>
                 <div class="wordInput">
-                    <input type="text" name="introducedWords" id="introducedWords" placeholder="Introduce a word...">
+                    <input autocomplete="off" type="text" name="introducedWords" id="introducedWords" placeholder="Introduce a word...">
                     <button type="submit">Send</button>
                 </div>
             </form>
@@ -34,9 +35,9 @@
         <div class="wordsList" id="wordsList">
             <h2>Your Words:</h2>
             <ul>
-                <li>word</li>
-                <li>word</li>
-                <li>word</li>
+                <li title="word">word</li>
+                <li title="largewordsolargemorelarge">largewordso<span>...</span></li>
+                <li title="word">word</li>
             </ul>
         </div>
     </main>
