@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css2?family=Righteous&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Questrial&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+span {
+    color: #2b7ecc;
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-weight: bold;
+    border: solid 2px #2b7ecc;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+header > h1 {
+    font-size: 35px;
+    font-family: 'Righteous', display;
+    color: #a2d2ff;
+    position: relative;
+    animation: fly 2s ease-in-out infinite alternate;
+    -webkit-text-stroke: 1px #2b7ecc;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(7px);
+    }
+}
+
+a > img {
+    width: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a > img:hover {
+    transform: scale(1.2);
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.letterContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.selectLetter {
+    text-align: center;
+}
+
+.selectLetter > p {
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.selectLetter > h2 {
+    font-size: 90px;
+    font-family: 'Righteous', display;
+    color: #b799fd;
+    -webkit-text-stroke: 1px #7248d4;
+}
+
+.letterContainer > h3 {
+    font-size: 25px;
+    border-radius: 60px;
+    padding: 20px 35px;
+    background-color: #fce1e4;
+    border: solid 3px #e9808c;
+    color: #e9808c;
+    font-family: 'Righteous', display;
+    font-weight: 400;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+    font-family: 'Questrial', sans-serif;
+}
+
+label {
+    font-size: 18px;
+}
+
+.wordInput {
+    margin: 20px;
+}
+
+input {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #fcf4dd;
+    color: #79611a;
+    font-size: 18px;
+    border: solid 2px #c0a143;
+    border-radius: 30px;
+    transition: border-width 0.3s ease-in-out;
+}
+
+input:focus {
+    border-width: 3px;
+    outline: none;
+}
+
+button {
+    padding: 12px 16px;
+    background-color: #d3ab33;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.wordsList {
+    width: 50%;
+    min-height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #2b7ecc;
+    border-radius: 20px;
+    font-family: 'Questrial', sans-serif;
+    color: #2b7ecc;
+    background-color: #dbedff;
+    padding: 20px;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+    font-size: 20px;
+}
