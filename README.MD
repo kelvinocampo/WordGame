@@ -82,10 +82,10 @@ Durante el desarrollo, se debe registrar:
 
 | Tarea                                      | Tiempo Estimado  | Tiempo Real |
 |--------------------------------------------|------------------|-------------|
-| Crear Estructura del proyecto              | 10 minutos       | 8 minutos      |
-| Crear Interfaz Inicio                      | 3 horas          | 3.5 horas      |
-| Crear Interfaz del juego                   | 3.5 horas        |             |
-| Crear Interfaz del ganador                 | 3 horas          |             |
+| Crear Estructura del proyecto              | 10 minutos       | 8 minutos   |
+| Crear Interfaz Inicio                      | 3 horas          | 3.5 horas   |
+| Crear Interfaz del juego                   | 3.5 horas        | 3.5 horas   |
+| Crear Interfaz del ganador                 | 3 horas          | 2 horas     |
 | Crear Interfaz de espera                   | 30 minutos       |             |
 | Crear Interfaz de siguiente jugador        | 30 minutos       |             |
 | Crear logica de seleccionar jugadores      | 30 minutos       |             |
@@ -100,7 +100,7 @@ Durante el desarrollo, se debe registrar:
 | Probar la Interfaz de juego                | 10 minutos       |             |
 | Probar la Interfaz de siguiente            | 5 minutos        |             |
 | Probar la Interfaz de ganador              | 10 minutos       |             |
-| Crear la documentacion requerida           | 2 hora           | 1.5 hora...    |
+| Crear la documentacion requerida           | 2 hora           | 1.5 hora... |
 
 ## Problemas encontrados y soluciones aplicadas
 
