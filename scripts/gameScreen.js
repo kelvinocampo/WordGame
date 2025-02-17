@@ -1,28 +1,53 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const timerDisplay = document.querySelector('header p');
+    const timerDisplay = document.querySelector('.time');
+    const timerDisplayWait = document.querySelector('.timeWait');
     const letterDisplay = document.getElementById('letter');
-    const playerDisplay = document.getElementById('player');
+    const playerDisplay = document.querySelector('.player');
+    const playerDisplayWait = document.querySelector('.playerWait');
     const wordForm = document.querySelector('form');
+    const divWordInput = document.querySelector('.wordInput');
     const wordInput = document.getElementById('introducedWords');
     const wordsList = document.querySelector('.wordsList ul');
+    const wordsListTable = document.querySelector('.wordsList');
+    const divUiAwait = document.querySelector('.uiWait');
+    const btnNextPlayer = document.querySelector('.nextPlayer');
+    const labelInput = document.querySelector('.labelInput');
 
     let players = [];
     let currentPlayerIndex = 0;
     let currentLetter = '';
     let timerInterval = null;
     let currentWords = [];
-    let timeLeft = 60;
+    let timeLeft = 10;
+    let timeWait = 5;
+
+    function uiAwait() {
+        timeWait = 5;
+        playerDisplayWait.textContent = players[currentPlayerIndex].name;
+        playerDisplayWait.style.background = players[currentPlayerIndex].background;
+        playerDisplayWait.style.border = players[currentPlayerIndex].background;
+
+        timerInterval = setInterval(() => {
+            timeWait--;
+            timerDisplayWait.textContent = `${timeWait}s`;
+
+            if (timeWait === 0) {
+                clearInterval(timerInterval);
+                divUiAwait.style.display = 'none';
+                startTurn();
+            }
+        }, 1000);
+    }
 
     function initGame(numPlayers) {
         players = Array.from({ length: numPlayers }, (_, i) => ({
-            name: `${i + 1}`,
+            name: `Player ${i + 1}`,
             background: generatePlayerColor(i, numPlayers),
             words: [],
             score: 0
         }));
-        startTurn();
+        uiAwait();
     }
-
 
     function generatePlayerColor(i, totalPlayers) {
         const hue = (360 / totalPlayers) * i;
@@ -41,9 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
         return alphabet[Math.floor(Math.random() * alphabet.length)];
     }
 
-
-
     function startTimer() {
+        timeLeft = 10;
         if (timerInterval) clearInterval(timerInterval);
 
         timerInterval = setInterval(() => {
@@ -68,15 +92,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function endTurn() {
         clearInterval(timerInterval);
+        divWordInput.style.display = 'none';
+        btnNextPlayer.style.display = 'flex';
+        labelInput.style.display = 'none'
         savePlayerWords();
+
         if (currentPlayerIndex === players.length - 1) {
             showResults();
-        } else {
-            nextPlayer();
         }
     }
-
-
 
     function validateWord(word) {
         const cleanWord = word.trim().toUpperCase();
@@ -100,7 +124,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function nextPlayer() {
         currentPlayerIndex++;
+
+        if (currentPlayerIndex >= players.length) {
+            currentPlayerIndex = 0;
+        }
+
+        btnNextPlayer.style.display = 'none';
+        divWordInput.style.display = 'flex';
+        labelInput.style.display = 'block';
+
         startTurn();
+    }
+
+    if (btnNextPlayer) {
+        btnNextPlayer.addEventListener('click', nextPlayer);
     }
 
     function updateUI() {
@@ -114,15 +151,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateWordList() {
         wordsList.innerHTML = currentWords
             .map(word => `
-                <li title="${word}"style="color: ${players[currentPlayerIndex].background}">
-                ${word} </li>`)
-            .join('');
+                <li title="${word}">
+                    ${word}
+                </li>`
+            ).join('');
+        wordsListTable.style.background = players[currentPlayerIndex].background;
+        wordsListTable.style.border = players[currentPlayerIndex].background;
     }
-
 
     const urlParams = new URLSearchParams(window.location.search);
     const numPlayers = parseInt(urlParams.get('players')) || 4;
-
 
     initGame(numPlayers);
 });

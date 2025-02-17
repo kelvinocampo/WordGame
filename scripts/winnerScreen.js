@@ -28,14 +28,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         link.addEventListener('click', () => {
             playersPoints.innerHTML = '';
+            playersPoints.style.color = '#ffebeb';
             playersPointsWords.textContent = player.words.length;
             playersPointsTable.style.display = 'flex';
             playersPointsTable.style.background = player.background;
             playersPointsTable.style.border = player.background;
+            
             player.words.forEach(word => {
                 const wordItem = document.createElement('li');
                 wordItem.textContent = word;
-                wordItem.style.color = player.background;
                 playersPoints.appendChild(wordItem);
             });
         });
