@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rankingList = document.querySelector('.ranking ul');
     const playersPoints = document.querySelector('.playersPoints ul');
     const playersPointsTable = document.querySelector('.playersPoints');
+    const playersPointsWords = document.querySelector('.playersPoints span');
 
     const totalWords = document.querySelector('.playersPoints h2 span');
 
@@ -27,7 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         link.addEventListener('click', () => {
             playersPoints.innerHTML = '';
+            playersPointsWords.textContent = player.words.length;
             playersPointsTable.style.display = 'flex';
+            playersPointsTable.style.background = player.background;
+            playersPointsTable.style.border = player.background;
             player.words.forEach(word => {
                 const wordItem = document.createElement('li');
                 wordItem.textContent = word;

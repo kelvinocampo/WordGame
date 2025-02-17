@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let players = [];
     let currentPlayerIndex = 0;
     let currentLetter = '';
-    let timeLeft = 3;
     let timerInterval = null;
     let currentWords = [];
+    let timeLeft = 60;
 
     function initGame(numPlayers) {
         players = Array.from({ length: numPlayers }, (_, i) => ({
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function startTimer() {
-        timeLeft = 3;
         if (timerInterval) clearInterval(timerInterval);
 
         timerInterval = setInterval(() => {
