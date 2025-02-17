@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <p class="time">60s</p>
+        <p>60s</p>
         <h1>Word Game</h1>
         <a href="../index.html">
             <img src="../assets/icons/back.png" alt="">
@@ -23,16 +23,13 @@
                     <p>Your letter:</p>
                     <h2 id="letter">A</h2>
                 </div>
-                <h3 class="player">Player 1</h3>
+                <h3 id="player">Player 1</h3>
             </div>
             <form>
                 <label for="introducedWords">Enter words starting with the letter above:</label>
                 <div class="wordInput">
                     <input autocomplete="off" type="text" name="introducedWords" id="introducedWords" placeholder="Introduce a word...">
                     <button type="submit">Send</button>
-                </div>
-                <div class="nextButton">
-                    <button>Next</button>
                 </div>
             </form>
         </div>
@@ -44,10 +41,8 @@
                 <li title="word">word</li>
             </ul>
         </div>
-        <div class="uiWait">
-            <h3 class="player">Player 1</h3>
-            <p class="time">3s</p>
-        </div>
     </main>
+
+    <script src="/scripts/app.js"></script>
 </body>
 </html>

@@ -18,15 +18,23 @@
         <form>
             <h2>Select the number of players</h2>
             <div class="selectPlayers">
-                <input type="radio" name="playersOption" id="twoPlayers" value="twoPlayers">
+                <input type="radio" name="playersOption" id="twoPlayers" value="2">
                 <label class="p2" for="twoPlayers">2</label>
-                <input type="radio" name="playersOption" id="threePlayers" value="threePlayers">
+                <input type="radio" name="playersOption" id="threePlayers" value="3">
                 <label class="p3" for="threePlayers">3</label>
-                <input type="radio" name="playersOption" id="fourPlayers" value="fourPlayers">
+                <input type="radio" name="playersOption" id="fourPlayers" value="4">
                 <label class="p4" for="fourPlayers">4</label>
             </div>
             <button type="submit">Start</button>
         </form>
     </main>
+    <script>
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const numPlayers = document.querySelector('input[name="playersOption"]:checked').value.split('Players')[0];
+            window.location.href = `templates/gameScreen.html?players=${numPlayers}`;
+        });
+    </script>
 </body>
+
 </html>

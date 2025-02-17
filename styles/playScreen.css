@@ -15,7 +15,7 @@ header {
     gap: 10%;
 }
 
-.time {
+header p {
     color: #2b7ecc;
     font-size: 20px;
     font-family: 'Questrial', sans-serif;
@@ -62,7 +62,6 @@ a img {
 
 
 main {
-    position: relative;
     width: 100%;
     height: 80%;
     display: flex;
@@ -88,17 +87,16 @@ main {
     justify-content: center;
     gap: 20px;
 
-}
-
-.player {
-    font-size: 25px;
-    border-radius: 60px;
-    padding: 20px 35px;
-    background-color: #fce1e4;
-    border: solid 3px #e9808c;
-    color: #e9808c;
-    font-family: 'Righteous', display;
-    font-weight: 400;
+    h3 {
+        font-size: 25px;
+        border-radius: 60px;
+        padding: 20px 35px;
+        background-color: #fce1e4;
+        border: solid 3px #e9808c;
+        color: #ffebeb;
+        font-family: 'Righteous', display;
+        font-weight: 400;
+    }
 }
 
 .selectLetter {
@@ -130,71 +128,49 @@ form {
     align-items: center;
     font-family: 'Questrial', sans-serif;
     gap: 10px;
+}
 
-    button {
-        padding: 12px 16px;
-        border: none;
-        border-radius: 30px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #ffffff;
-        transition: 0.2s ease-in-out;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
-    .wordInput {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-
-        input {
-            padding: 10px 20px;
-            background-color: #fcf4dd;
-            color: #79611a;
-            font-size: 18px;
-            border: solid 2px #c0a143;
-            border-radius: 30px;
-            transition: all 0.2s ease;
-            width: 210px;
-
-            &:focus {
-                outline: solid 3px #c0a143;
-            }
-        }
-
-        button {
-            background-color: #d3ab33;
-        }
-    }
-
-    .nextButton {
-        width: 100%;
-        height: 100%;
-
-        button {
-            border: solid 2px #2b7ecc;
-            width: 100%;
-            background-color: #a2d2ff;
-            color: #2b7ecc;
-            display: none;
-
-            &:hover {
-                background-color: #2b7ecc;
-                color: #ffffff;
-            }
-        }
-    }
-
+.wordInput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 label {
     font-size: 18px;
+}
+
+input {
+    padding: 10px 20px;
+    background-color: #fcf4dd;
+    color: #79611a;
+    font-size: 18px;
+    border: solid 2px #c0a143;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    width: 210px;
+
+    &:focus {
+        outline: solid 3px #c0a143;
+    }
+}
+
+button {
+    padding: 12px 16px;
+    background-color: #d3ab33;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .wordsList {
@@ -221,20 +197,4 @@ label {
         align-items: center;
         font-size: 20px;
     }
-}
-
-.uiWait{
-    height: 100%;
-    background: #fff;
-    position: absolute;
-    padding-top: 100px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    gap: 100px;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    display: none;
 }
