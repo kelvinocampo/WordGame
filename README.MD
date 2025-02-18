@@ -108,4 +108,8 @@ Se encontró un problema al intentar asignar los colores a cada jugador, ya que 
 
 Otro problema detectado ocurrió al implementar el botón next, ya que generaba varios errores: a veces no funcionaba, reiniciaba todo el juego o no hacía aparecer el input nuevamente, entre otros fallos. La solución fue modificar el orden en el que se llamaban las funciones.
 
+Se detecto un problema al hacer el ajuste con display: flex al momento de centrar y ordenar en columna el input para introducir las palabras en la pantalla de juego, ya que al hacer el ajuste a este contenedor, el contenedor superior de la letra y el numero del jugador de ajustaban de la misma manera desordenando el diseño realizado para éste, la solucion fue aplicar un width: 100% al contenedor de la letra y el jugador, pues este se ajustaba segun el tamaño que se le agregara al contenedor inferior.
+
+En la pantalla de inicio, se les agrego una animacion a los inputs de tipo radio (mas especificamente al label correspondiente de cada uno), a pesar de haber agregado la animacion esta no funcionaba en el navegador, la solucion fue colocar en el atributo "name" el mismo valor para todos los inputs y los labels
+
 ## Feedback del cliente y cambios realizados
