@@ -86,11 +86,11 @@ Durante el desarrollo, se debe registrar:
 | Crear Interfaz Inicio                      | 3 horas          | 3.5 horas   |
 | Crear Interfaz del juego                   | 3.5 horas        | 3.5 horas   |
 | Crear Interfaz del ganador                 | 3 horas          | 2 horas     |
-| Crear Interfaz de espera                   | 30 minutos       |             |
-| Crear Interfaz de siguiente jugador        | 30 minutos       |             |
+| Crear Interfaz de espera                   | 30 minutos       | 30 minutas  |
+| Crear Interfaz de siguiente jugador        | 30 minutos       | 10 minutos  |
 | Crear logica de seleccionar jugadores      | 30 minutos       | 20 minutos  |
 | Crear logica de generar letra al azar      | 20 minutos       | 20 minutos  |
-| Crear logica de manejo de tiempo           | 40 minutos       | 5 minutos  |
+| Crear logica de manejo de tiempo           | 40 minutos       | 5 minutos   |
 | Crear logica de ingreso de palabras        | 40 minutos       | 30 minutos  |
 | Crear Logica de mostrar palabras recientes | 40 minutos       | 20 minutos  |
 | Crear logica de cambio de jugador          | 1 hora           | 50 minutos  |
