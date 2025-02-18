@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             player.words.forEach(word => {
                 const wordItem = document.createElement('li');
-                wordItem.textContent = `- ` + word;
+                wordItem.textContent = `- ` + word.slice(0, 10);
                 wordItem.style.display = 'block';
                 playersPoints.appendChild(wordItem);
             });

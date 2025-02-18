@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wordsList.innerHTML = lastThreeWords
             .map(word => `
                 <li title="${word}">
-                    ${word.slice(0,30)}
+                    ${word.slice(0,10)}
                 </li>`
             ).join('');
         wordsListTable.style.background = playerColors[currentPlayerIndex].backgroundColor;
