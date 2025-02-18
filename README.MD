@@ -95,12 +95,12 @@ Durante el desarrollo, se debe registrar:
 | Crear Logica de mostrar palabras recientes | 40 minutos       | 20 minutos  |
 | Crear logica de cambio de jugador          | 1 hora           | 50 minutos  |
 | Crear Logica de calcular ganador           | 1 hora           | 55 minutos  |
-| Probar la Interfaz de inicio               | 15 minutos       |             |
-| Probar la Interfaz de espera               | 10 minutos       |             |
-| Probar la Interfaz de juego                | 10 minutos       |             |
-| Probar la Interfaz de siguiente            | 5 minutos        |             |
-| Probar la Interfaz de ganador              | 10 minutos       |             |
-| Crear la documentacion requerida           | 2 hora           | 1.5 hora... |
+| Probar la Interfaz de inicio               | 15 minutos       | 10 minutos  |
+| Probar la Interfaz de espera               | 10 minutos       | 2 minutos   |
+| Probar la Interfaz de juego                | 10 minutos       | 15 minutos  |
+| Probar la Interfaz de siguiente            | 5 minutos        | 2 minutos   |
+| Probar la Interfaz de ganador              | 10 minutos       | 10 minutos  |
+| Crear la documentacion requerida           | 2 hora           | 2 horas     |
 
 ## Problemas encontrados y soluciones aplicadas
 
