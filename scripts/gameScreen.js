@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLetter = '';
     let timerInterval = null;
     let currentWords = [];
-    let timeLeft = 10;
-    let timeWait = 5;
+    let timeLeft = 60;
+    let timeWait = 3;
 
     function uiAwait() {
-        timeWait = 5;
+        timeWait = 3;
         playerDisplayWait.textContent = players[currentPlayerIndex].name;
         playerDisplayWait.style.background = playerColors[currentPlayerIndex].backgroundColor;
         playerDisplayWait.style.border = playerColors[currentPlayerIndex].border;
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function startTimer() {
-        timeLeft = 10;
+        timeLeft = 60;
         if (timerInterval) clearInterval(timerInterval);
 
         timerInterval = setInterval(() => {
