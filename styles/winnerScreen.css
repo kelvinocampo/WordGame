@@ -157,7 +157,7 @@ main {
 }
 
 .playersPoints {
-    height: 20%;
+    height: 40%;
     display: none;
     flex-direction: column;
     align-items: center;
