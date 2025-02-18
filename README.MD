@@ -92,7 +92,7 @@ Durante el desarrollo, se debe registrar:
 | Crear logica de generar letra al azar      | 20 minutos       | 20 minutos  |
 | Crear logica de manejo de tiempo           | 40 minutos       | 5 minutos   |
 | Crear logica de ingreso de palabras        | 40 minutos       | 30 minutos  |
-| Crear Logica de mostrar palabras recientes | 40 minutos       | 20 minutos  |
+| Crear Logica de mostrar palabras recientes | 40 minutos       | 25 minutos  |
 | Crear logica de cambio de jugador          | 1 hora           | 50 minutos  |
 | Crear Logica de calcular ganador           | 1 hora           | 55 minutos  |
 | Probar la Interfaz de inicio               | 15 minutos       | 10 minutos  |
