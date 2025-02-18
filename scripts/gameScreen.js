@@ -1,3 +1,5 @@
+import { playerColors } from './playersColors.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const timerDisplay = document.querySelector('.time');
     const timerDisplayWait = document.querySelector('.timeWait');
@@ -12,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const divUiAwait = document.querySelector('.uiWait');
     const btnNextPlayer = document.querySelector('.nextPlayer');
     const labelInput = document.querySelector('.labelInput');
+    
+
 
     let players = [];
     let currentPlayerIndex = 0;
@@ -24,9 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function uiAwait() {
         timeWait = 5;
         playerDisplayWait.textContent = players[currentPlayerIndex].name;
-        playerDisplayWait.style.background = players[currentPlayerIndex].background;
-        playerDisplayWait.style.border = players[currentPlayerIndex].background;
-
+        playerDisplayWait.style.background = playerColors[currentPlayerIndex].backgroundColor;
+        playerDisplayWait.style.border = playerColors[currentPlayerIndex].border;
+        playerDisplayWait.style.color = playerColors[currentPlayerIndex].color;
         timerInterval = setInterval(() => {
             timeWait--;
             timerDisplayWait.textContent = `${timeWait}s`;
@@ -41,17 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initGame(numPlayers) {
         players = Array.from({ length: numPlayers }, (_, i) => ({
-            name: `Player ${i + 1}`,
-            background: generatePlayerColor(i, numPlayers),
+            name: `${i + 1}`,
+            colorClass: playerColors[i],
             words: [],
             score: 0
         }));
         uiAwait();
-    }
-
-    function generatePlayerColor(i, totalPlayers) {
-        const hue = (360 / totalPlayers) * i;
-        return `hsl(${hue}deg, 70%, 50%)`;
     }
 
     function startTurn() {
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(timerInterval);
         divWordInput.style.display = 'none';
         btnNextPlayer.style.display = 'flex';
-        labelInput.style.display = 'none'
+        labelInput.style.display = 'none';
         savePlayerWords();
 
         if (currentPlayerIndex === players.length - 1) {
@@ -132,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnNextPlayer.style.display = 'none';
         divWordInput.style.display = 'flex';
         labelInput.style.display = 'block';
-
+        wordForm.reset();
         startTurn();
     }
 
@@ -143,20 +142,23 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateUI() {
         letterDisplay.textContent = currentLetter;
         playerDisplay.textContent = players[currentPlayerIndex].name;
-        playerDisplay.style.background = players[currentPlayerIndex].background;
-        playerDisplay.style.border = players[currentPlayerIndex].background;
+        playerDisplay.style.background = playerColors[currentPlayerIndex].backgroundColor;
+        playerDisplay.style.border = playerColors[currentPlayerIndex].border;
+        playerDisplay.style.color = playerColors[currentPlayerIndex].color;
         updateWordList();
     }
 
     function updateWordList() {
-        wordsList.innerHTML = currentWords
+        const lastThreeWords = currentWords.slice(-3);
+        wordsList.innerHTML = lastThreeWords
             .map(word => `
                 <li title="${word}">
                     ${word}
                 </li>`
             ).join('');
-        wordsListTable.style.background = players[currentPlayerIndex].background;
-        wordsListTable.style.border = players[currentPlayerIndex].background;
+        wordsListTable.style.background = playerColors[currentPlayerIndex].backgroundColor;
+        wordsListTable.style.border = playerColors[currentPlayerIndex].border;
+        wordsListTable.style.color = playerColors[currentPlayerIndex].color;
     }
 
     const urlParams = new URLSearchParams(window.location.search);

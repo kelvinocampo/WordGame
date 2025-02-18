@@ -81,7 +81,29 @@ main {
     gap: 40px;
     width: 300px;
 }
+.pl1 {
+    background-color: #fce1e4;
+    border: solid 1px #e9808c;
+    color: #e9808c;
+}
 
+.pl2 {
+    background-color: #fcf4dd;
+    border: solid 1px #c0a143;
+    color: #c0a143;
+}
+
+.pl3 {
+    background-color: #e7f1e9;
+    border: solid 1px #6ac775;
+    color: #6ac775;
+}
+
+.pl4 {
+    background-color: #c8e4ff;
+    border: solid 1px #2b7ecc;
+    color: #2b7ecc;
+}
 .letterContainer {
     width: 100%;
     display: flex;

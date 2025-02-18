@@ -1,3 +1,5 @@
+import { playerColors } from './playersColors.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     const playersData = JSON.parse(localStorage.getItem('playersData'));
     const sortedPlayers = playersData.sort((a, b) => b.score - a.score);
@@ -20,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = document.createElement('a');
         link.href = '#';
         link.textContent = `${player.name}`;
-        link.style.background = player.background;
+        link.style.background = playerColors[index].backgroundColor;
+        link.style.border = playerColors[index].border;
+        link.style.color = playerColors[index].color;
 
         if (isWinner) {
             link.classList.add('winner');
@@ -28,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         link.addEventListener('click', () => {
             playersPoints.innerHTML = '';
-            playersPoints.style.color = '#ffebeb';
             playersPointsWords.textContent = player.words.length;
             playersPointsTable.style.display = 'flex';
-            playersPointsTable.style.background = player.background;
-            playersPointsTable.style.border = player.background;
+            playersPointsTable.style.background = playerColors[index].backgroundColor;
+            playersPointsTable.style.border = playerColors[index].border;
+            playersPointsTable.style.color = playerColors[index].color;
             
             player.words.forEach(word => {
                 const wordItem = document.createElement('li');
