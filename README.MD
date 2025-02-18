@@ -104,4 +104,8 @@ Durante el desarrollo, se debe registrar:
 
 ## Problemas encontrados y soluciones aplicadas
 
+Se encontró un problema al intentar asignar los colores a cada jugador, ya que estos no estaban definidos en la hoja de estilos correspondiente. Para solucionarlo, se creó un script con un array que contiene las clases, los colores, los bordes y el fondo de cada jugador. Luego, este script se exportó a game screen, donde se recorrió el array y se asignaron los estilos a cada jugador dinámicamente.
+
+Otro problema detectado ocurrió al implementar el botón next, ya que generaba varios errores: a veces no funcionaba, reiniciaba todo el juego o no hacía aparecer el input nuevamente, entre otros fallos. La solución fue modificar el orden en el que se llamaban las funciones.
+
 ## Feedback del cliente y cambios realizados
