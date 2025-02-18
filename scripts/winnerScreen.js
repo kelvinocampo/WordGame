@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const playersPoints = document.querySelector('.playersPoints ul');
     const playersPointsTable = document.querySelector('.playersPoints');
     const playersPointsWords = document.querySelector('.playersPoints span');
-
     const totalWords = document.querySelector('.playersPoints h2 span');
 
     rankingList.innerHTML = '';
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isWinner) {
             link.classList.add('winner');
         }
-
         link.addEventListener('click', () => {
             playersPoints.innerHTML = '';
             playersPointsWords.textContent = player.words.length;
@@ -37,10 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
             playersPointsTable.style.background = playerColors[index].backgroundColor;
             playersPointsTable.style.border = playerColors[index].border;
             playersPointsTable.style.color = playerColors[index].color;
-            
+
             player.words.forEach(word => {
                 const wordItem = document.createElement('li');
-                wordItem.textContent = word;
+                wordItem.textContent = `- ` + word;
+                wordItem.style.display = 'block';
                 playersPoints.appendChild(wordItem);
             });
         });
